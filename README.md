@@ -1,2 +1,2 @@
-Just my kitty and zsh dotfiles 
+Just my dotfiles 
 nothing to see here
