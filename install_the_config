@@ -1,0 +1,11 @@
+sudo pacman -Syu
+sudo pacman -S zsh
+zsh
+mkdir ~/.fonts
+rm -r ~/.config/i3/config
+cp ~/not-available/i3/config ~/.config/i3/
+rm -r ~/.zshrc
+cp ~/not-available/.zshrc ~/.zshrc
+sudo pacman -S neofetch
+
+echo "Installation has finished If you using i3 please logout and login."
