@@ -22,6 +22,7 @@ now go to .fonts directory where u may ask figure it out ur self
 paste the files in .fonts directory
 
 i just noticed that install file is not executable so here is the command to make it executable and u need to be in the not-available directory
+
 chmod +x ./install_the_config
 
 ah this is gonna be the most cringiest repo
