@@ -25,6 +25,7 @@ i just noticed that install file is not executable so here is the command to mak
 
 chmod +x ./install_the_config
 
+
 ah this is gonna be the most cringiest repo
 
 Done!
