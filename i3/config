@@ -209,7 +209,7 @@ bar {
 exec compton -f
 exec firefox
 exec alacritty
-exec_always feh --bg-scale /home/derek1/Pictures/woods
+exec_always feh --bg-scale /home/enderman/Pictures/woods
 
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
