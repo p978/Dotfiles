@@ -7,5 +7,7 @@ cp ~/not-available/i3/config ~/.config/i3/
 rm -r ~/.zshrc
 cp ~/not-available/.zshrc ~/.zshrc
 sudo pacman -S neofetch
+sudo rm -r /etc/i3status.conf
+sudo cp ~/not-available/i3status.conf /etc/
 
 echo "Installation has finished If you using i3 please logout and login."
