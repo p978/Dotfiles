@@ -1,3 +1,4 @@
+sudo pacman -S nitrogen
 sudo pacman -S alacritty
 sudo pacman -Syu
 sudo pacman -S zsh
