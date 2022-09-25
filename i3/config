@@ -208,5 +208,3 @@ gaps inner 10
 
 exec feh --bg-fill ~/Downloads/pictures/3a16396040f98fe8441864bbd001762d.png
 exec bash ~/.config/polybar/launch.sh --forest
-bindsym $mod+l exec lutris
-bindsym $mod+v exec bitwarden 
