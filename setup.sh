@@ -4,5 +4,5 @@ cp -r alacritty ~/.config/alacritty
 cp -r nvim ~/.config/nvim
 nvim
 cp -r wallpaper ~/.config/i3/wallpaper 
-
+cp .zshrc ~/.zshrc
 
