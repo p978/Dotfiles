@@ -1,5 +1,18 @@
-![10: Terminal  _001](https://user-images.githubusercontent.com/59633184/131215468-e59dc50b-48e0-48fa-85ba-620155cad340.png)
+# Dotfiles
+My dotfiles 
 
+# Dependencies
+- Polybar
 
-Just my dotfiles :)
+- Install Polybar-Themes 
 
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git
+
+cd polybar-themes
+
+chmod +x setup.sh
+
+./setup.sh
+
+# Installation 
+- Run setup.sh
