@@ -6,6 +6,7 @@ My dotfiles
 
 - Nvim
 
+- i3
 
 # Installation 
 - git clone https://github.com/p978/Dotfiles
