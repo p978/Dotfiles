@@ -15,4 +15,6 @@ chmod +x setup.sh
 ./setup.sh
 
 # Installation 
+- git clone https://github.com/p978/Dotfiles
+
 - Run setup.sh
