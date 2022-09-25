@@ -191,36 +191,28 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        status_command i3status
-        colors {
-		background $bg-color
-    	separator #757575
-		#                  border             background         text
-		focused_workspace  $bg-color          $bg-color          $text-color
-		inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-		urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-	}
-}
+set_from_resource $inactive-bg-color i3wm.color0           #2f343f
+set_from_resource $urgent-bg-color i3wm.color3             #E53935
 
+set_from_resource $focused-border-color i3wm.color6        #2f343f
+set_from_resource $unfocused-border-color i3wm.color0      #2f343f
 
-
-
-exec compton -f
-exec alacritty
-exec_always feh --bg-scale /home/$HOME/Pictures/wallhaven-1jp151.jpg 
-
-set $bg-color 	         #2f343f
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+set_from_resource $focused-text-color i3wm.color1          #f3f4f5
+set_from_resource $inactive-text-color i3wm.color8         #676E7D
+set_from_resource $focused_inactive-text-color i3wm.color6 #676E7D
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#                       border                background           text                         indicator        child_border
+client.focused          $bg-color             $bg-color            $focused-text-color          #00ff00          $focused-border-color
+client.unfocused        $unfocused-border-color $inactive-bg-color $inactive-text-color         #00ff00          $bg-color
+client.focused_inactive $inactive-bg-color    $inactive-bg-color   $focused_inactive-text-color #00ff00          $bg-color
+client.urgent           $urgent-bg-color      $urgent-bg-color     $focused-text-color          #00ff00          #ff0000
+client.placeholder      $bg-color             $bg-color            $focused-text-color          #00ff00          #0c0c0c
 
-hide_edge_borders both
+client.background $bg-color
+
+gaps inner 20
+gaps inner 10
+
+exec feh --bg-fill ~/.config/i3/background/wallpaper.png
+exec bash ~/.config/polybar/launch.sh --forest
