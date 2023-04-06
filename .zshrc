@@ -1,7 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -12,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -74,7 +70,7 @@ ZSH_THEME="powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting )
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,17 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias darkdugeon="cd ~/Downloads/games/prefix/Darkestdugeon/drive_c/Darkest\ Dungeon/_windowsnosteam && WINEPREFIX=~/Downloads/games/prefix/Darkestdugeon wine ~/Downloads/games/prefix/Darkestdugeon/drive_c/Darkest\ Dungeon/_windowsnosteam/Darkest.exe"
-alias tor="cd ~/Downloads/tor/tor-browser_en-US && ./start-tor-browser.desktop && ~"
-alias fall="cd ~/Downloads/games/prefix/SeasonAfterFall/drive_c/Seasons\ after\ Fall && WINEPREFIX=~/Downloads/games/prefix/SeasonAfterFall wine ~/Downloads/games/prefix/SeasonAfterFall/drive_c/Seasons\ after\ Fall/Seasons\ after\ Fall.exe"
-alias coffee_talk="cd ~/Downloads/games/prefix/Coffee/drive_c/GOG\ Games/Coffee\ Talk/ && WINEPREFIX=~/Downloads/games/prefix/Coffee wine CoffeeTalk.exe"
-alias nvim="nvim -c "LspStart pyright bashls ""
-alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
-
-clear
+alias pacman="sudo pacman"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
 
